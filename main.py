@@ -1,14 +1,11 @@
-users:list=[
-            {"name":"Oliwier","location":"Zamość","posts":2},
-            {"name":"Kuba","location":"Zamość","posts":3},
-            {"name":"Konrad","location":"Zamość","posts":500},
-            {"name":"Johny","location":"Zamość","posts":10},
-]
+from utils.model import users
+from utils.controller import get_user_info
 
 
 
-def get_user_info(users_data:list)->None:
-    for user in users_data:
-        print(f"Twój znajomy {user["name"]} z miejscowości {user["location"]} opublikował {user["posts"]} postów.")
+def main():
+    get_user_info(users)
 
-get_user_info(users)
+
+if __name__ == "__main__":
+    main()
